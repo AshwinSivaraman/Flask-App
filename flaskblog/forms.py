@@ -20,7 +20,7 @@ class RegistrationForm(FlaskForm):
         if user:
             raise ValidationError("Email address taken. Please choose another email address.")
 
-class LoginForm(FlaskForm):
+class LoginForm(FlaskForm): 
     email = StringField('email ID', validators=[DataRequired(), Email()])
     password = PasswordField('password', validators=[DataRequired()])
     remember = BooleanField('Remember Me')
